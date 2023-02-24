@@ -1,0 +1,1539 @@
+@font-face {
+	font-family: 'Arial';
+	src: url('../fonts/Ariall/Arial-BoldItalicMT.eot');
+	src: local('Arial'), local('ArialMT'),
+		url('../fonts/Ariall/ArialMT.ttf') format('embedded-opentype'),
+		url('../fonts/Ariall/ArialMT.woff2') format('woff2'),
+		url('../fonts/Ariall/ArialMT.woff') format('woff'),
+		url('ArialMT.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Arial';
+	src: url('../fonts/Ariall/Arial-BoldMT.eot');
+	src: local('Arial Bold'), local('Arial-BoldMT'),
+		url('Arial-BoldMT.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Ariall/Arial-BoldMT.woff2') format('woff2'),
+		url('../fonts/Ariall/Arial-BoldMT.woff') format('woff'),
+		url('../fonts/Ariall/Arial-BoldMT.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Trebuchet MS';
+	src: url('../fonts/TrebuchetMS/TrebuchetMS-Bold.eot');
+	src: local('Trebuchet MS Bold'), local('TrebuchetMS-Bold'),
+		url('TrebuchetMS-Bold.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/TrebuchetMS/TrebuchetMS-Bold.woff') format('woff'),
+		url('../fonts/TrebuchetMS/TrebuchetMS-Bold.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Trebuchet MS';
+	src: url('../fonts/TrebuchetMS/TrebuchetMS.eot');
+	src: local('Trebuchet MS'), local('TrebuchetMS'),
+		url('TrebuchetMS.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/TrebuchetMS/TrebuchetMS.woff') format('woff'),
+		url('../fonts/TrebuchetMS/TrebuchetMS.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+*Обнуление*/ * {
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+
+*,
+*:before,
+*:after {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+:focus,
+:active {
+	outline: none;
+}
+
+a:focus,
+a:active {
+	outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+	display: block;
+}
+
+html,
+body {
+	height: 100%;
+	width: 100%;
+	font-size: 100%;
+	line-height: 1;
+	font-family: 'Arial';
+	/* font-size: 0.875rem;*/
+	margin: 0;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	/*background-color: #333;*/
+	background-color: #FFFFFF;
+	/*background-color: #262c37;*/
+	/*color: #FFF;*/
+}
+
+/* 
+font-family: 'Trebuchet MS';
+font-family: 'Roboto', sans-serif;
+font-family: 'DM Sans', sans-serif;
+ */
+
+input,
+button,
+textarea {
+	font-family: inherit;
+}
+
+input::-ms-clear {
+	display: none;
+}
+
+button {
+	cursor: pointer;
+}
+
+button::-moz-focus-inner {
+	padding: 0;
+	border: 0;
+}
+
+a,
+a:visited {
+	text-decoration: none;
+	color: inherit;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+/* ul li {
+	list-style: none;
+} */
+
+img {
+	vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-size: inherit;
+	font-weight: inherit;
+}
+
+/************************************container********************************************/
+.none {
+	display: none;
+}
+
+.wrapper {
+	max-width: 87.5rem;
+	overflow: hidden;
+	min-height: 100%;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+}
+
+.main {
+	flex: 1 1 auto;
+}
+
+/* .container {
+	max-width: 1230px;
+	margin: 0px auto;
+	padding: 0px 15px ;
+} */
+[class*="__container"] {
+	max-width: 66.875rem;
+	margin: 0 auto;
+	padding-left: 0.9375rem;
+	padding-right: 0.9375rem;
+}
+
+/************************************************header***********/
+.header {
+	max-width: 100%;
+	background: #008BAA;
+}
+
+.header__container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.header__logo {
+	display: flex;
+
+	gap: 1.375rem;
+	margin: 1.875rem 0px;
+}
+
+.header__logo p {
+	margin: 8px 0px 0px 0px;
+
+	font-style: normal;
+	font-weight: 400;
+	font-size: 1rem;
+	line-height: 112.5%;
+	/* 18px/16 */
+	color: #FFFFFF;
+
+}
+
+.header__contact {
+	display: flex;
+	align-items: center;
+	gap: 9px;
+}
+
+.header__contact-tel {
+	font-style: normal;
+	font-weight: 400;
+	font-size: 1.875rem;
+	line-height: 113.333333%;
+	/* 34px/30 */
+	color: #FFFFFF;
+}
+
+.header__contact p {
+	font-style: normal;
+	font-weight: 400;
+	font-size: 1rem;
+	line-height: 112.5%;
+	/* 18px/16 */
+	color: #FFFFFF;
+}
+
+.header__social {
+	display: flex;
+	align-items: center;
+	gap: 16px;
+}
+
+@media (max-width: 991.98px) {
+	.header__logo {
+		display: flex;
+		gap: 6px;
+		margin: 20px 0px;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.header__contact {
+		display: flex;
+		align-items: center;
+		gap: 0px;
+		flex-direction: column;
+
+	}
+}
+
+@media (max-width: 767.98px) {
+	.header__logo img {
+		width: 6.25rem;
+		height: 2.5rem;
+	}
+
+	.header__logo p {
+		margin: 8px 0px 0px 0px;
+		font-size: 0.625rem;
+
+	}
+
+	.header__contact-tel {
+
+		font-size: 1.25rem;
+
+	}
+
+	.header__contact p {
+		font-size: 0.625rem;
+	}
+
+	.header__social {
+		gap: 5px;
+	}
+}
+
+@media (max-width: 479.98px) {
+	.header__container {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 20px;
+		row-gap: 0px;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.header__social {
+		gap: 10px;
+	}
+}
+
+/*************************************************about-us**********/
+
+.about-us {
+	margin: 1.5rem 0px 0px 0px;
+}
+
+.about-us__image {
+	position: relative;
+	max-width: 100%;
+	height: 34.5625rem;
+	background: url(../img/main/aboutUs/image.png)center / cover no-repeat;
+
+}
+
+.about-us__image::before {
+	content: "";
+	position: absolute;
+	width: 26.375rem;
+	height: 4.0625rem;
+	right: 0;
+	bottom: -1px;
+	background: url(../img/main/aboutUs/bifor/Vector.png)center / cover no-repeat;
+}
+
+.about-us__image-content {
+	position: absolute;
+	width: 15.625rem;
+	height: 15.625rem;
+	left: 2rem;
+	bottom: 2.0625rem;
+
+	/* background/$accent */
+
+	background: rgba(255, 242, 0, 0.7);
+	border-radius: 50%;
+}
+
+.content-image__inner {
+	margin: 2.8125rem 2.5rem 0px 2.5rem;
+}
+
+.content-image__inner-title {
+	text-align: center;
+
+}
+
+.content-image__inner-title h3 {
+	font-family: 'Trebuchet MS';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 1.5625rem;
+	line-height: 116%;
+	/* 29px/25 */
+
+	color: #000000;
+
+}
+
+.content-image__inner-title em {
+	margin: 16px 0px 0px 0px;
+	font-family: 'Trebuchet MS';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 0.875rem;
+	line-height: 114.285714%;
+	/* 16px/14 */
+
+	text-transform: uppercase;
+	color: #000000;
+
+}
+
+.content-image__inner-title p {
+	margin: 6px auto;
+	width: 6.75rem;
+	height: 1.9375rem;
+
+	font-family: 'Trebuchet MS';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 1.5rem;
+	line-height: 116.666667%;
+	/* 28px/24 */
+	text-transform: uppercase;
+
+	color: #FFFFFF;
+	background: #000000;
+
+}
+
+.about-us__content {
+	display: flex;
+	justify-content: space-between;
+	gap: 20px;
+
+}
+
+.hotel-content {
+	flex: 0 0 63%;
+}
+
+.hotel-content__name {
+	margin: 23px 0px 0px 0px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 3.125rem;
+}
+
+.hotel-content__name h2 {
+	margin: 0px 20px 0px 0px;
+	font-family: 'Trebuchet MS';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 2.1875rem;
+	line-height: 130%;
+
+	color: #000000;
+}
+
+.hotel-content__name img {
+	width: 9.125rem;
+	height: 1.625rem;
+}
+
+.hotel-content__name p {
+	font-family: 'Trebuchet MS';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 35px;
+	line-height: 130%;
+	text-align: center;
+	color: #000000;
+}
+
+.hotel-content__review {
+	max-width: 100%;
+
+}
+
+
+
+.about-us__content-item {
+	margin: -1.0625rem 7.5rem 0px 0px;
+
+}
+
+
+
+.item-about-us__days {
+
+	font-family: 'Trebuchet MS';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 5.5rem;
+	line-height: 115.909091%;
+	/* 102px/88 */
+
+	letter-spacing: -0.05em;
+	text-transform: uppercase;
+
+	color: #777777;
+}
+
+.item-about-us__text {
+	margin: -34px 0px 0px 0px;
+
+	width: 9rem;
+	height: 3.9375rem;
+
+	font-style: normal;
+	font-weight: 400;
+	font-size: 1.875rem;
+	line-height: 103.333333%;
+	/* 31px/30 */
+
+	color: #000000;
+}
+
+/********************************/
+
+.hotel-review__inner {
+	display: grid;
+	align-items: start;
+	gap: 20px;
+	grid-template-columns: 7.375rem 4rem 3.75rem 6.25rem 3.8125rem 7.8125rem;
+	margin: 0px 0px 0px -37px;
+}
+
+.hotel-review__item {
+	margin: 0px 12px 0px 0px;
+	list-style: none;
+}
+
+.hotel-review__item-grade {
+	font-style: normal;
+	font-weight: 400;
+	font-size: 0.75rem;
+	line-height: 116.666667%;
+	/* 14px/12 */
+
+	letter-spacing: 0.05em;
+
+
+	color: #000000;
+	margin: 8px 0px;
+}
+
+.hotel-review__item-link {
+	font-style: normal;
+	font-weight: 400;
+	font-size: 0.75rem;
+	line-height: 116.666667%;
+	/* 14px/12 */
+
+	letter-spacing: 0.05em;
+	text-transform: uppercase;
+
+	color: #000000;
+	margin: 8px 0px;
+}
+
+.hotel-review__item-number {
+	font-style: normal;
+	font-weight: 700;
+	font-size: 1.125rem;
+	line-height: 116.666667%;
+	/* 21px/18 */
+
+	letter-spacing: 0.05em;
+
+
+	color: #000000;
+	margin: 0;
+}
+
+.hotel-review__item-color {
+	width: 3.25rem;
+	height: 3.25rem;
+
+	background: #008BAA;
+}
+
+p.hotel-review__item-color {
+	padding: 12px 0px;
+	font-family: 'Trebuchet MS';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 1.5rem;
+	line-height: 116.666667%;
+	/* 28px/24 */
+
+	text-align: center;
+
+	color: #FFFFFF;
+	margin: 0;
+}
+
+@media (max-width: 991.98px) {
+	.hotel-content__name h2 {
+		margin: 0px 20px 0px 0px;
+		font-size: 27px;
+
+	}
+
+	.hotel-review__inner {
+		gap: 20px;
+		grid-template-columns: 6.375rem 3rem 2.75rem 5.25rem 2.8125rem 6.8125rem;
+		margin: 0px 0px 0px -37px;
+	}
+}
+
+@media (max-width: 767.98px) {
+	.about-us__image::before {
+		width: 154px;
+		height: 31px;
+	}
+
+	.about-us__image-content {
+		width: 185px;
+		height: 185px;
+	}
+
+	.content-image__inner {
+		margin: 2.8125rem 2.5rem 0px 2.5rem;
+	}
+
+	.content-image__inner-title h3 {
+
+		font-size: 1.125rem;
+
+		margin: 0px 0px 5px 0px;
+
+	}
+
+	.content-image__inner-title em {
+		margin: 12px 0px 0px 0px;
+		font-size: 0.625rem;
+	}
+
+	.content-image__inner-title p {
+		margin: 0px auto;
+		width: 5.5625rem;
+		height: 1.375rem;
+		font-size: 1.125rem;
+	}
+
+
+
+	.hotel-content__name h2 {
+		margin: 0px 20px 0px 0px;
+		font-size: 18px;
+	}
+
+	.hotel-content__name img {
+		width: 78px;
+		height: 16px;
+	}
+
+	.hotel-content__name p {
+		font-size: 24px;
+	}
+
+	.hotel-review__inner {
+		gap: 5px;
+		grid-template-columns: 85px 32px 38px 73px 42px 94px;
+		margin: 0px 0px 0px -37px;
+	}
+
+	.hotel-review__item {
+		margin: 0px 12px 0px 0px;
+		list-style: none;
+	}
+
+	.hotel-review__item-grade {
+		font-size: 10px;
+		margin: 8px 0px;
+	}
+
+	.hotel-review__item-number {
+
+		font-size: 14px;
+
+	}
+
+	p.hotel-review__item-color {
+		width: 35px;
+		height: 40px;
+		padding: 12px 0px;
+		font-size: 12px;
+	}
+
+
+	.hotel-review__item-link {
+		font-size: 10px;
+		margin: 8px 0px;
+	}
+
+	.about-us__content {
+		gap: 2px;
+	}
+
+	.hotel-review__item-number {
+		font-size: 10px;
+	}
+
+	.about-us__content-item {
+		margin: 0px 120px 0px 0px;
+	}
+
+	.item-about-us__days {
+
+		font-size: 30px;
+	}
+
+	.item-about-us__text {
+		margin: -18px 0px 0px 0px;
+		width: 63px;
+		height: 32px;
+		font-size: 12px;
+	}
+}
+
+@media (max-width: 479.98px) {
+	.about-us {
+		margin: 18px 0px 0px 0px;
+	}
+
+	.about-us__image-content {
+		width: 135px;
+		height: 135px;
+		left: 20px;
+		bottom: 10px;
+	}
+
+	.content-image__inner {
+		margin: 16px 10px 0px 10px;
+	}
+
+	.content-image__inner-title h3 {
+		font-size: 14px;
+	}
+
+	.content-image__inner-title p {
+		font-size: 14px;
+	}
+
+	.about-us__content {
+		display: flex;
+		flex-direction: column-reverse;
+		align-items: flex-end;
+		justify-content: space-between;
+		gap: 0px;
+	}
+
+	.about-us__content-item {
+		margin: 0px 0px 0px 0px;
+	}
+
+	.hotel-content {
+		width: 100%;
+	}
+
+	.hotel-content__name h2 {
+		margin: 0px 20px 0px 0px;
+		font-size: 14px;
+	}
+
+	.hotel-content__name img {
+		width: 69px;
+		height: 11px;
+	}
+
+	.hotel-content__name p {
+		font-size: 14px;
+	}
+
+	.hotel-review__item-number {
+		font-size: 8px;
+	}
+
+
+	.hotel-review__item {
+		margin: 0px 5px 0px 0px;
+	}
+
+	.hotel-review__inner {
+		gap: 5px;
+		grid-template-columns: 43px 25px 31px 62px 33px 73px;
+	}
+
+	.hotel-review__item-grade {
+		margin: 5px 0px;
+	}
+
+	.hotel-review__item-number {
+
+		font-size: 12px;
+
+	}
+
+	p.hotel-review__item-color {
+		width: 28px;
+		height: 40px;
+		padding: 10px 0px;
+		font-size: 10px;
+	}
+
+	.hotel-review__item-link {
+		font-size: 8px;
+		margin: 8px 0px;
+	}
+
+	.hotel-review__item-number {
+		font-size: 10px;
+	}
+
+}
+
+/**********************************************services***********/
+
+.services {
+	margin: 48px 0px 0px 0px;
+}
+
+.services__inner {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	gap: 38px;
+}
+
+.inner-services {
+	flex: 0 0 48.076%;
+}
+
+.inner-services__image {
+	width: 100%;
+	height: 280px;
+	position: relative;
+	overflow: hidden;
+}
+
+.inner-services__image img {
+	position: absolute;
+	content: "";
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	object-fit: cover;
+	transition: all 0.8s;
+}
+
+.inner-services__image:hover img {
+	transform: scale(1.05);
+}
+
+.inner-services__content {
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+
+}
+
+.inner-services__content h3 {
+	position: relative;
+	font-family: 'Trebuchet MS';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 35px;
+	line-height: 130%;
+	color: #000000;
+
+}
+
+.inner-services__content h3 span {
+	color: #CB0000;
+}
+
+.inner-services__content h3::before {
+	position: absolute;
+	content: "";
+	width: 270px;
+	height: 0px;
+	left: 0px;
+	top: 46px;
+	opacity: 0.25;
+	border: 1px solid #000000;
+}
+
+.inner-services__content p {
+	font-family: 'Trebuchet MS';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 35px;
+	line-height: 130%;
+	text-align: right;
+	color: #000000;
+}
+
+.inner-services__description {
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.inner-services__description p {
+	font-style: normal;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 19px;
+
+	color: #000000;
+}
+
+
+
+.inner-services__description-old-price {
+	position: relative;
+	font-family: 'Trebuchet MS';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 23px;
+
+	text-align: center;
+	color: #777777;
+}
+
+.inner-services__description-old-price::after {
+	position: absolute;
+	content: "";
+	width: 38px;
+	height: 0px;
+	left: -6px;
+	top: 8px;
+
+	border: 1px solid #CB0000;
+	transform: rotate(180deg);
+
+}
+
+@media (max-width: 767.98px) {
+	.services {
+		margin: 33px 0px 0px 0px;
+	}
+
+	.services__inner {
+		gap: 5px;
+	}
+
+	.inner-services {
+		flex: 0 0 47.076%;
+	}
+
+	.inner-services__image {
+		width: 100%;
+		height: 180px;
+
+	}
+
+	.inner-services__content h3 {
+		margin: 0;
+		font-size: 18px;
+
+	}
+
+	.inner-services__content h3::before {
+		width: 210px;
+		height: 0px;
+		left: 0px;
+		top: 35px;
+	}
+
+	.inner-services__content p {
+
+		font-size: 18px;
+
+	}
+
+	.inner-services__description p {
+
+		font-size: 12px;
+
+	}
+}
+
+@media (max-width: 479.98px) {
+	.services__inner {
+		width: 100%;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 10px;
+	}
+
+	.inner-services {
+		flex: 0 0 90%;
+	}
+}
+
+/*********************************************promo-code******************/
+
+.promo-code {
+	margin: 48px 0px 0px 0px;
+	border: 1px solid #E0E0E0;
+	border-radius: 6px;
+}
+
+
+.promo-code__inner {
+	max-width: 100%;
+	padding: 35px 0px 0px 0px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.promo-code__discount {
+	margin: 0px 30px 0px 20px;
+}
+
+.promo-code__discount h3 {
+	font-style: normal;
+	font-weight: 700;
+	font-size: 28px;
+	line-height: 120%;
+
+	text-align: center;
+	color: #008BAA;
+}
+
+.promo-code__content a {
+	font-style: normal;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 120%;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	color: #008BAA;
+}
+
+.promo-code__content h4 {
+	margin: 4px 0px 8px 0px;
+	font-style: normal;
+	font-weight: 700;
+	font-size: 22px;
+	line-height: 130%;
+
+	color: #000000;
+}
+
+.promo-code__content p {
+	margin: 0;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 19px;
+
+	color: #000000;
+}
+
+.promo-code__button {
+	width: 22%;
+	min-height: 60px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: linear-gradient(180deg, #00AAAA 0%, #008BAA 100%);
+	border-radius: 24px;
+	padding: 13px 42.5px;
+	cursor: pointer;
+
+	border: none;
+	box-shadow: 0 5px 0 #695d80;
+	position: relative;
+	top: 0;
+}
+
+.promo-code__button:hover {
+	background-color: #095f72;
+	transition: bacground-color 0.5s ease 0s;
+}
+
+.promo-code__button:active {
+	top: 3px;
+	box-shadow: 0 2px 0 #082f38;
+}
+
+.promo-code__button a {
+
+	font-style: normal;
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 21px;
+
+	text-align: center;
+
+	color: #FFFFFF;
+}
+
+.promo-code__text {
+	width: 100%;
+	height: 47px;
+	background: #F7F7F7;
+	border: 1px solid #E0E0E0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 8px;
+}
+
+.promo-code__text p {
+	font-style: normal;
+	font-weight: 400;
+	font-size: 13px;
+	line-height: 120%;
+
+	text-align: center;
+
+	color: #777777;
+}
+
+.promo-code__text img {
+	width: 10px;
+	height: 10px;
+}
+
+@media (max-width: 991.98px) {
+	.promo-code {
+		margin: 28px 0px 0px 0px;
+
+	}
+}
+
+@media (max-width: 767.98px) {
+	.promo-code__discount h3 {
+		font-size: 18px;
+	}
+
+	.promo-code__content a {
+		font-size: 10px;
+	}
+
+	.promo-code__content h4 {
+		margin: 4px 0px 8px 0px;
+		font-size: 16px;
+	}
+
+	.promo-code__content p {
+
+		font-size: 10px;
+
+	}
+
+	.promo-code__button {
+		width: 16%;
+		min-height: 47px;
+		padding: 10px 20.5px;
+	}
+
+	.promo-code__button a {
+		font-size: 10px;
+		line-height: 10px;
+	}
+
+	.promo-code__text {
+		width: 100%;
+		height: 35px;
+		gap: 2px;
+	}
+
+	.promo-code__text p {
+
+		font-size: 10px;
+
+	}
+}
+
+@media (max-width: 479.98px) {
+	.promo-code__inner {
+		max-width: 100%;
+		padding: 35px 0px 0px 0px;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.promo-code__content {
+		text-align: center;
+	}
+
+	.promo-code__button {
+		width: 62%;
+		margin: 14px 0px 14px 0px;
+
+		min-height: 47px;
+		padding: 10px 20.5px;
+	}
+}
+
+/**********************************************cognitive************/
+.cognitive__inner {
+	max-width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 35px;
+}
+
+.cognitive__content {
+	margin: 80px 0px 0px 0px;
+	max-width: 76%;
+}
+
+.cognitive__content-title {
+	font-family: 'Trebuchet MS';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 48px;
+	line-height: 130%;
+
+	color: #000000;
+}
+
+.cognitive__content-text {
+	margin: 32px 0px 0px 0px;
+	font-family: 'Arial';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 19px;
+
+	/* text/$color-text */
+
+	color: #000000;
+}
+
+.fatty {
+	font-weight: 700;
+}
+
+.cognitive__content-subtitle {
+	font-style: normal;
+	font-weight: 700;
+	font-size: 22px;
+	line-height: 130%;
+	/* identical to box height, or 29px */
+
+
+	/* text/$color-text */
+
+	color: #000000;
+}
+
+blockquote {
+	margin: 33px 0px 33px 58px;
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	padding: 0px;
+	gap: 16px;
+
+}
+
+blockquote::after {
+	position: absolute;
+	content: "";
+	width: 8px;
+	height: 96px;
+	left: -15px;
+	top: -10px;
+	background: #008BAA;
+
+}
+
+.cognitive__content-subtitles {
+	margin: 0px 0px -15px 0px;
+	font-style: normal;
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 130%;
+
+	color: #000000;
+
+}
+
+
+.cognitive__index {
+	width: 227px;
+	height: 319px;
+	text-align: start;
+
+}
+
+.cognitive__index-number {
+
+	font-family: 'Trebuchet MS';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 100px;
+	line-height: 116px;
+	letter-spacing: -0.05em;
+
+	color: #777777;
+	margin: 0px 0px -25px 0px
+}
+
+.cognitive__index-title {
+	margin: 0;
+	padding: 0;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 30px;
+	line-height: 31px;
+
+	/* text/$color-text */
+
+	color: #000000;
+	margin: 0px 0px -25px 0px
+}
+
+.cognitive__index-text {
+	margin: 0;
+	padding: 0;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 25px;
+
+	color: #777777;
+}
+
+@media (max-width: 991.98px) {
+	.cognitive__content {
+		margin: 40px 0px 0px 0px;
+
+	}
+}
+
+@media (max-width: 767.98px) {
+	.cognitive__index-number {
+		font-size: 50px;
+		margin: 0px 0px -25px 0px;
+		line-height: 72px;
+	}
+
+	.cognitive__index-title {
+		font-size: 18px;
+		line-height: 24px;
+		margin: 0px 0px -25px 0px;
+	}
+
+	.cognitive__index-text {
+		padding: 5px 0px 0px 0px;
+		font-size: 12px;
+		line-height: 13px;
+
+	}
+
+	.cognitive__content-title {
+		font-size: 24px;
+	}
+
+	.cognitive__content-text {
+		margin: 15px 0px 0px 0px;
+		font-size: 10px;
+		line-height: 13px;
+
+	}
+
+	.cognitive__content-subtitle {
+		font-size: 18px;
+	}
+
+	blockquote::after {
+		width: 8px;
+		height: 123px;
+		left: -15px;
+		top: -10px;
+
+	}
+
+	.cognitive__content-subtitles {
+		margin: 0px 0px -5px 0px;
+		font-size: 14px;
+	}
+}
+
+@media (max-width: 479.98px) {
+	.cognitive__content {
+		margin: 20px 0px 0px 0px;
+	}
+
+	.cognitive__inner {
+		max-width: 100%;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		gap: 0px;
+	}
+
+	.cognitive__content {
+		max-width: 100%;
+	}
+
+	blockquote::after {
+		height: 135px;
+	}
+
+	.cognitive__index {
+		width: 227px;
+		height: 147px;
+
+	}
+}
+
+/**********************************************************/
+.table-name {
+	margin: 40px 0px 40px 0px;
+}
+
+table {
+	width: 85%;
+	border-collapse: separate;
+	letter-spacing: 8px 16px;
+
+
+}
+
+td,
+th {
+	padding: 13px 0px 11px 0px;
+}
+
+td {
+	text-align: start;
+	font-family: 'DM Sans';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 20px;
+
+
+	letter-spacing: 0.1px;
+
+	color: #000000;
+}
+
+th {
+	font-family: 'DM Sans';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 20px;
+
+
+	text-align: start;
+	letter-spacing: 0.1px;
+
+	color: #000000;
+
+}
+
+@media (max-width: 479.98px) {
+	.table-name {
+		margin: 20px 0px 20px 0px;
+	}
+
+	table {
+		width: 100%;
+	}
+
+	td,
+	th {
+		padding: 8px 0px 6px 0px;
+	}
+
+	td {
+		font-size: 10px;
+	}
+
+	th {
+		font-size: 10px;
+		line-height: 20px;
+	}
+}
+
+/********************************************************/
+.aboutus {
+	margin: 42px 0px 0px 0px;
+}
+
+
+
+.aboutus__text {
+	font-style: normal;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 19px;
+	color: #000000;
+}
+
+.aboutus__item {}
+
+.aboutus__items a {
+	font-style: normal;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 19px;
+
+	color: #000000;
+}
+
+@media (max-width: 479.98px) {
+	.aboutus {
+		margin: 20px 0px 0px 0px;
+	}
+
+	.aboutus__text {
+		font-size: 10px;
+		line-height: 12px;
+	}
+
+	.aboutus__items a {
+		font-size: 10px;
+		line-height: 12px;
+	}
+}
+
+/***************************************.footer*********/
+.footer {
+	margin: 48px 0px 0px 0px;
+}
+
+.footer__contitul {
+	font-style: normal;
+	font-weight: 400;
+	font-size: 12px;
+	line-height: 17px;
+
+	color: #000000;
+}
+
+.footer__contitul a {
+	color: #0059AC;
+}
+
+@media (max-width: 479.98px) {
+	.footer {
+		margin: 25px 0px 0px 0px;
+	}
+
+	.footer__contitul {
+		font-size: 8px;
+		line-height: 17px;
+
+	}
+}
+
+/***********************************************************/
+/*@import url("header.css");*/
+/*@media (max-width: 1092px){}
+@media (max-width: 991.98px){}
+@media (max-width: 767.98px){}
+@media (max-width: 479.98px){}*/
+
+/*******************************GIT*********************************************************/
+
+/* git push origin master    git add .    git remote add origin https://github.com/CKRoMA/git-course.git*/
+/* git commit -a -m "Commit message." git push -u origin master  git push -u origin master*/
+
+/*******************************************************************************************/
